@@ -333,5 +333,70 @@
       "payload": {}
     },
     "session": "projects/appointmentbot-d99w/agent/sessions/69ec6c04-fbb6-034e-f48a-d96344b12734"
+  },
+  {
+    "responseId": "3dee0c39-80f7-4987-bf5c-96ffb5d3f903-c0685893",
+    "queryResult": {
+      "queryText": "1 / 30 minutes",
+      "speechRecognitionConfidence": 0.7705148,
+      "parameters": {
+        "name": "mitang",
+        "email": "mitang@gmail.com",
+        "phoneNumber": "8511690269",
+        "date": "2025-05-02T12:00:00+05:30",
+        "startTime": "2025-04-30T12:00:00+05:30",
+        "duration": {
+          "amount": 30,
+          "unit": "min"
+        }
+      },
+      "allRequiredParamsPresent": true,
+      "fulfillmentText": "Thank you for calling us.",
+      "fulfillmentMessages": [
+        {
+          "text": {
+            "text": [
+              "Thank you for calling us."
+            ]
+          }
+        }
+      ],
+      "outputContexts": [
+        {
+          "name": "projects/appointmentbot-d99w/agent/sessions/69ec6c04-fbb6-034e-f48a-d96344b12734/contexts/__system_counters__",
+          "parameters": {
+            "no-input": 0,
+            "no-match": 0,
+            "name": "mitang",
+            "name.original": "mitang",
+            "email": "mitang@gmail.com",
+            "email.original": "mitang@gmail.com",
+            "phoneNumber": "8511690269",
+            "phoneNumber.original": "8511690269",
+            "date": "2025-05-02T12:00:00+05:30",
+            "date.original": "2nd May 2025",
+            "startTime": "2025-04-30T12:00:00+05:30",
+            "startTime.original": "12 p.m.",
+            "duration": {
+              "amount": 30,
+              "unit": "min"
+            },
+            "duration.original": "30 minutes"
+          }
+        }
+      ],
+      "intent": {
+        "name": "projects/appointmentbot-d99w/agent/intents/e5eb69a4-c799-4e75-a623-cb0d4483313a",
+        "displayName": "Book Appointment",
+        "endInteraction": true
+      },
+      "intentDetectionConfidence": 0.3,
+      "languageCode": "en"
+    },
+    "originalDetectIntentRequest": {
+      "source": "DIALOGFLOW_CONSOLE",
+      "payload": {}
+    },
+    "session": "projects/appointmentbot-d99w/agent/sessions/69ec6c04-fbb6-034e-f48a-d96344b12734"
   }
 ]
