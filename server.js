@@ -1,51 +1,68 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
-
-// Initialize Express app
+const { Octokit } = require("@octokit/rest");
 const app = express();
-const port = 3000;
+const bodyParser = require('body-parser');
 
-// Middleware
+// Body parser middleware
 app.use(bodyParser.json());
 
-// Define file path for saving appointments
-const filePath = path.join(__dirname, 'appointments.json');
+// GitHub authentication
+const octokit = new Octokit({
+  auth: process.env.GITHUB_SECRET, // Replace with your personal GitHub token
+});
 
-// Check if the file exists, if not, create an empty file
-if (!fs.existsSync(filePath)) {
-  fs.writeFileSync(filePath, JSON.stringify([])); // Start with an empty array
-}
+const owner = process.env.USERNAME; // GitHub username
+const repo = 'appointments-data'; // GitHub repo name
+const filePath = 'appointments.json'; // Path to the JSON file in the repo
 
-// Endpoint to book an appointment
-app.post('/book-appointment', (req, res) => {
-  const { name, email, phoneNumber, date, startTime, duration } = req.body;
+// Appointment route (POST)
+app.post('/book-appointment', async (req, res) => {
+  const appointmentData = req.body; // { name, email, phone, date, time, duration }
 
-  // Read the current appointments data from the file
-  const appointments = JSON.parse(fs.readFileSync(filePath));
+  try {
+    // Fetch the existing appointments from GitHub
+    const { data: fileContent } = await octokit.repos.getContent({
+      owner,
+      repo,
+      path: filePath,
+    });
 
-  // Create a new appointment object
-  const newAppointment = {
-    name,
-    email,
-    phoneNumber,
-    date,
-    startTime,
-    duration,
-  };
+    // Decode the file content from Base64
+    const content = Buffer.from(fileContent.content, 'base64').toString('utf-8');
+    let appointments = JSON.parse(content) || [];
 
-  // Push the new appointment to the array
-  appointments.push(newAppointment);
+    // Add the new appointment
+    appointments.push(appointmentData);
 
-  // Write the updated appointments array back to the file
-  fs.writeFileSync(filePath, JSON.stringify(appointments, null, 2));
+    // Encode the updated data to Base64
+    const updatedContent = Buffer.from(JSON.stringify(appointments, null, 2)).toString('base64');
 
-  // Respond with a success message
-  res.status(200).json({ message: "Appointment booked successfully!" });
+    // Commit the new data to GitHub
+    await octokit.repos.createOrUpdateFileContents({
+      owner,
+      repo,
+      path: filePath,
+      message: 'Add new appointment',
+      content: updatedContent,
+      sha: fileContent.sha, // Use the current file's SHA to update it
+    });
+
+    res.status(200).json({ message: 'Appointment booked successfully!' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to save appointment data' });
+  }
+});
+
+// Default route (for testing)
+app.get('/', (req, res) => {
+  res.send('Hello, Appointment API is running!');
 });
 
 // Start the server
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server is running on port ${port}`);
 });
