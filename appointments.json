@@ -664,5 +664,160 @@
       }
     },
     "session": "projects/appointmentbot-d99w/agent/sessions/94f81f8d-8270-3fbc-bd46-dfec552bf2cb"
+  },
+  {
+    "responseId": "7b12d161-b34a-4fa0-9d75-eb1cfa86172b-f0ab2964",
+    "queryResult": {
+      "queryText": "mitang",
+      "parameters": {
+        "name": "mitang",
+        "email": "",
+        "phoneNumber": "",
+        "date": "",
+        "startTime": "",
+        "duration": ""
+      },
+      "fulfillmentText": "What’s your email?",
+      "fulfillmentMessages": [
+        {
+          "text": {
+            "text": [
+              "What’s your email?"
+            ]
+          }
+        }
+      ],
+      "outputContexts": [
+        {
+          "name": "projects/appointmentbot-d99w/agent/sessions/94f81f8d-8270-3fbc-bd46-dfec552bf2cb/contexts/e5eb69a4-c799-4e75-a623-cb0d4483313a_id_dialog_context",
+          "lifespanCount": 2,
+          "parameters": {
+            "name": "mitang",
+            "name.original": "mitang",
+            "email": "",
+            "email.original": "",
+            "phoneNumber": "",
+            "phoneNumber.original": "",
+            "date": "",
+            "date.original": "",
+            "startTime": "",
+            "startTime.original": "",
+            "duration": "",
+            "duration.original": ""
+          }
+        },
+        {
+          "name": "projects/appointmentbot-d99w/agent/sessions/94f81f8d-8270-3fbc-bd46-dfec552bf2cb/contexts/book_appointment_dialog_context",
+          "lifespanCount": 2,
+          "parameters": {
+            "name": "mitang",
+            "name.original": "mitang",
+            "email": "",
+            "email.original": "",
+            "phoneNumber": "",
+            "phoneNumber.original": "",
+            "date": "",
+            "date.original": "",
+            "startTime": "",
+            "startTime.original": "",
+            "duration": "",
+            "duration.original": ""
+          }
+        },
+        {
+          "name": "projects/appointmentbot-d99w/agent/sessions/94f81f8d-8270-3fbc-bd46-dfec552bf2cb/contexts/book_appointment_dialog_params_email",
+          "lifespanCount": 1,
+          "parameters": {
+            "name": "mitang",
+            "name.original": "mitang",
+            "email": "",
+            "email.original": "",
+            "phoneNumber": "",
+            "phoneNumber.original": "",
+            "date": "",
+            "date.original": "",
+            "startTime": "",
+            "startTime.original": "",
+            "duration": "",
+            "duration.original": ""
+          }
+        },
+        {
+          "name": "projects/appointmentbot-d99w/agent/sessions/94f81f8d-8270-3fbc-bd46-dfec552bf2cb/contexts/__system_counters__",
+          "lifespanCount": 1,
+          "parameters": {
+            "no-input": 0,
+            "no-match": 0,
+            "name": "mitang",
+            "name.original": "mitang",
+            "email": "",
+            "email.original": "",
+            "phoneNumber": "",
+            "phoneNumber.original": "",
+            "date": "",
+            "date.original": "",
+            "startTime": "",
+            "startTime.original": "",
+            "duration": "",
+            "duration.original": ""
+          }
+        }
+      ],
+      "intent": {
+        "name": "projects/appointmentbot-d99w/agent/intents/e5eb69a4-c799-4e75-a623-cb0d4483313a",
+        "displayName": "Book Appointment"
+      },
+      "intentDetectionConfidence": 0.3,
+      "languageCode": "en"
+    },
+    "originalDetectIntentRequest": {
+      "source": "slack",
+      "payload": {
+        "data": {
+          "authorizations": [
+            {
+              "team_id": "T08Q7A40MFZ",
+              "user_id": "U08T8GGBWA1",
+              "is_bot": true
+            }
+          ],
+          "event": {
+            "event_ts": "1747805120.494549",
+            "text": "mitang",
+            "channel": "D08T8GGBWG5",
+            "type": "message",
+            "blocks": [
+              {
+                "type": "rich_text",
+                "block_id": "YzOiy",
+                "elements": [
+                  {
+                    "type": "rich_text_section",
+                    "elements": [
+                      {
+                        "text": "mitang",
+                        "type": "text"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "client_msg_id": "2247c03a-060b-46e8-8857-a0534b2e554c",
+            "ts": "1747805120.494549",
+            "team": "T08Q7A40MFZ",
+            "channel_type": "im",
+            "user": "U08Q7A40XL7"
+          },
+          "api_app_id": "A08TCHWJ3LJ",
+          "event_time": "1747805120",
+          "event_id": "Ev08U04V84MN",
+          "type": "event_callback",
+          "token": "b8ZuATgztO36Rg9y27PD95Ec",
+          "team_id": "T08Q7A40MFZ"
+        }
+      }
+    },
+    "session": "projects/appointmentbot-d99w/agent/sessions/94f81f8d-8270-3fbc-bd46-dfec552bf2cb"
   }
 ]
