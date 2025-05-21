@@ -1748,5 +1748,159 @@
       }
     },
     "session": "projects/appointmentbot-d99w/agent/sessions/94f81f8d-8270-3fbc-bd46-dfec552bf2cb"
+  },
+  {
+    "responseId": "0df178d3-c829-4e18-98e1-5907401f07f2-f0ab2964",
+    "queryResult": {
+      "queryText": "1pm",
+      "parameters": {
+        "name": "mitang",
+        "email": "mitangpatel7234@gmail.com",
+        "phoneNumber": "12345678",
+        "date": "2025-05-21T12:00:00+05:00",
+        "startTime": "2025-05-21T13:00:00+05:00",
+        "duration": ""
+      },
+      "fulfillmentText": "How long would you like the appointment to last?",
+      "fulfillmentMessages": [
+        {
+          "text": {
+            "text": [
+              "How long would you like the appointment to last?"
+            ]
+          }
+        }
+      ],
+      "outputContexts": [
+        {
+          "name": "projects/appointmentbot-d99w/agent/sessions/94f81f8d-8270-3fbc-bd46-dfec552bf2cb/contexts/e5eb69a4-c799-4e75-a623-cb0d4483313a_id_dialog_context",
+          "lifespanCount": 2,
+          "parameters": {
+            "name": "mitang",
+            "name.original": "mitang",
+            "email": "mitangpatel7234@gmail.com",
+            "email.original": "mitangpatel7234@gmail.com",
+            "phoneNumber": "12345678",
+            "phoneNumber.original": "12345678",
+            "date": "2025-05-21T12:00:00+05:00",
+            "date.original": "today",
+            "startTime": "2025-05-21T13:00:00+05:00",
+            "startTime.original": "1pm",
+            "duration": "",
+            "duration.original": ""
+          }
+        },
+        {
+          "name": "projects/appointmentbot-d99w/agent/sessions/94f81f8d-8270-3fbc-bd46-dfec552bf2cb/contexts/book_appointment_dialog_context",
+          "lifespanCount": 2,
+          "parameters": {
+            "name": "mitang",
+            "name.original": "mitang",
+            "email": "mitangpatel7234@gmail.com",
+            "email.original": "mitangpatel7234@gmail.com",
+            "phoneNumber": "12345678",
+            "phoneNumber.original": "12345678",
+            "date": "2025-05-21T12:00:00+05:00",
+            "date.original": "today",
+            "startTime": "2025-05-21T13:00:00+05:00",
+            "startTime.original": "1pm",
+            "duration": "",
+            "duration.original": ""
+          }
+        },
+        {
+          "name": "projects/appointmentbot-d99w/agent/sessions/94f81f8d-8270-3fbc-bd46-dfec552bf2cb/contexts/book_appointment_dialog_params_duration",
+          "lifespanCount": 1,
+          "parameters": {
+            "name": "mitang",
+            "name.original": "mitang",
+            "email": "mitangpatel7234@gmail.com",
+            "email.original": "mitangpatel7234@gmail.com",
+            "phoneNumber": "12345678",
+            "phoneNumber.original": "12345678",
+            "date": "2025-05-21T12:00:00+05:00",
+            "date.original": "today",
+            "startTime": "2025-05-21T13:00:00+05:00",
+            "startTime.original": "1pm",
+            "duration": "",
+            "duration.original": ""
+          }
+        },
+        {
+          "name": "projects/appointmentbot-d99w/agent/sessions/94f81f8d-8270-3fbc-bd46-dfec552bf2cb/contexts/__system_counters__",
+          "lifespanCount": 1,
+          "parameters": {
+            "no-input": 0,
+            "no-match": 0,
+            "name": "mitang",
+            "name.original": "mitang",
+            "email": "mitangpatel7234@gmail.com",
+            "email.original": "mitangpatel7234@gmail.com",
+            "phoneNumber": "12345678",
+            "phoneNumber.original": "12345678",
+            "date": "2025-05-21T12:00:00+05:00",
+            "date.original": "today",
+            "startTime": "2025-05-21T13:00:00+05:00",
+            "startTime.original": "1pm",
+            "duration": "",
+            "duration.original": ""
+          }
+        }
+      ],
+      "intent": {
+        "name": "projects/appointmentbot-d99w/agent/intents/e5eb69a4-c799-4e75-a623-cb0d4483313a",
+        "displayName": "Book Appointment"
+      },
+      "intentDetectionConfidence": 1,
+      "languageCode": "en"
+    },
+    "originalDetectIntentRequest": {
+      "source": "slack",
+      "payload": {
+        "data": {
+          "api_app_id": "A08T7K9GQPN",
+          "authorizations": [
+            {
+              "user_id": "U08Q7A40XL7",
+              "team_id": "T08Q7A40MFZ"
+            }
+          ],
+          "team_id": "T08Q7A40MFZ",
+          "token": "zc4Rh3TmJjwtRFhksh7M84YF",
+          "type": "event_callback",
+          "event_time": "1747805162",
+          "event": {
+            "event_ts": "1747805162.181169",
+            "team": "T08Q7A40MFZ",
+            "channel_type": "im",
+            "type": "message",
+            "text": "1pm",
+            "blocks": [
+              {
+                "elements": [
+                  {
+                    "elements": [
+                      {
+                        "text": "1pm",
+                        "type": "text"
+                      }
+                    ],
+                    "type": "rich_text_section"
+                  }
+                ],
+                "type": "rich_text",
+                "block_id": "wIy2C"
+              }
+            ],
+            "channel": "D08T8GGBWG5",
+            "client_msg_id": "389b21ad-9c54-4872-931a-00537e4f86f0",
+            "user": "U08Q7A40XL7",
+            "ts": "1747805162.181169"
+          },
+          "event_id": "Ev08SX57650X"
+        }
+      }
+    },
+    "session": "projects/appointmentbot-d99w/agent/sessions/94f81f8d-8270-3fbc-bd46-dfec552bf2cb"
   }
 ]
