@@ -974,5 +974,161 @@
       }
     },
     "session": "projects/appointmentbot-d99w/agent/sessions/94f81f8d-8270-3fbc-bd46-dfec552bf2cb"
+  },
+  {
+    "responseId": "c4aa63af-c468-43f5-af1b-a21073d3e7d8-f0ab2964",
+    "queryResult": {
+      "queryText": "mitangpatel7234@gmail.com",
+      "parameters": {
+        "name": "mitang",
+        "email": "mitangpatel7234@gmail.com",
+        "phoneNumber": "",
+        "date": "",
+        "startTime": "",
+        "duration": ""
+      },
+      "fulfillmentText": "Please provide your phone number for booking.",
+      "fulfillmentMessages": [
+        {
+          "text": {
+            "text": [
+              "Please provide your phone number for booking."
+            ]
+          }
+        }
+      ],
+      "outputContexts": [
+        {
+          "name": "projects/appointmentbot-d99w/agent/sessions/94f81f8d-8270-3fbc-bd46-dfec552bf2cb/contexts/e5eb69a4-c799-4e75-a623-cb0d4483313a_id_dialog_context",
+          "lifespanCount": 2,
+          "parameters": {
+            "name": "mitang",
+            "name.original": "mitang",
+            "email": "mitangpatel7234@gmail.com",
+            "email.original": "mitangpatel7234@gmail.com",
+            "phoneNumber": "",
+            "phoneNumber.original": "",
+            "date": "",
+            "date.original": "",
+            "startTime": "",
+            "startTime.original": "",
+            "duration": "",
+            "duration.original": ""
+          }
+        },
+        {
+          "name": "projects/appointmentbot-d99w/agent/sessions/94f81f8d-8270-3fbc-bd46-dfec552bf2cb/contexts/book_appointment_dialog_context",
+          "lifespanCount": 2,
+          "parameters": {
+            "name": "mitang",
+            "name.original": "mitang",
+            "email": "mitangpatel7234@gmail.com",
+            "email.original": "mitangpatel7234@gmail.com",
+            "phoneNumber": "",
+            "phoneNumber.original": "",
+            "date": "",
+            "date.original": "",
+            "startTime": "",
+            "startTime.original": "",
+            "duration": "",
+            "duration.original": ""
+          }
+        },
+        {
+          "name": "projects/appointmentbot-d99w/agent/sessions/94f81f8d-8270-3fbc-bd46-dfec552bf2cb/contexts/book_appointment_dialog_params_phonenumber",
+          "lifespanCount": 1,
+          "parameters": {
+            "name": "mitang",
+            "name.original": "mitang",
+            "email": "mitangpatel7234@gmail.com",
+            "email.original": "mitangpatel7234@gmail.com",
+            "phoneNumber": "",
+            "phoneNumber.original": "",
+            "date": "",
+            "date.original": "",
+            "startTime": "",
+            "startTime.original": "",
+            "duration": "",
+            "duration.original": ""
+          }
+        },
+        {
+          "name": "projects/appointmentbot-d99w/agent/sessions/94f81f8d-8270-3fbc-bd46-dfec552bf2cb/contexts/__system_counters__",
+          "lifespanCount": 1,
+          "parameters": {
+            "no-input": 0,
+            "no-match": 0,
+            "name": "mitang",
+            "name.original": "mitang",
+            "email": "mitangpatel7234@gmail.com",
+            "email.original": "mitangpatel7234@gmail.com",
+            "phoneNumber": "",
+            "phoneNumber.original": "",
+            "date": "",
+            "date.original": "",
+            "startTime": "",
+            "startTime.original": "",
+            "duration": "",
+            "duration.original": ""
+          }
+        }
+      ],
+      "intent": {
+        "name": "projects/appointmentbot-d99w/agent/intents/e5eb69a4-c799-4e75-a623-cb0d4483313a",
+        "displayName": "Book Appointment"
+      },
+      "intentDetectionConfidence": 1,
+      "languageCode": "en"
+    },
+    "originalDetectIntentRequest": {
+      "source": "slack",
+      "payload": {
+        "data": {
+          "team_id": "T08Q7A40MFZ",
+          "authorizations": [
+            {
+              "is_bot": true,
+              "team_id": "T08Q7A40MFZ",
+              "user_id": "U08T8GGBWA1"
+            }
+          ],
+          "token": "b8ZuATgztO36Rg9y27PD95Ec",
+          "type": "event_callback",
+          "event_id": "Ev08SX55C8KH",
+          "event_time": "1747805138",
+          "api_app_id": "A08TCHWJ3LJ",
+          "event": {
+            "channel_type": "im",
+            "event_ts": "1747805138.418399",
+            "ts": "1747805138.418399",
+            "team": "T08Q7A40MFZ",
+            "user": "U08Q7A40XL7",
+            "type": "message",
+            "text": "<mailto:mitangpatel7234@gmail.com|mitangpatel7234@gmail.com>",
+            "channel": "D08T8GGBWG5",
+            "client_msg_id": "1819afa6-e5f5-43ec-9b0b-cba964aadcf1",
+            "blocks": [
+              {
+                "block_id": "/VFZT",
+                "elements": [
+                  {
+                    "elements": [
+                      {
+                        "url": "mailto:mitangpatel7234@gmail.com",
+                        "text": "mitangpatel7234@gmail.com",
+                        "type": "link"
+                      }
+                    ],
+                    "type": "rich_text_section"
+                  }
+                ],
+                "type": "rich_text"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "session": "projects/appointmentbot-d99w/agent/sessions/94f81f8d-8270-3fbc-bd46-dfec552bf2cb"
   }
 ]
